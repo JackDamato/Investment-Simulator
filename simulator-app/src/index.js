@@ -3,10 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { quoteStock } from './lookup.js'
-
-
-// quoteStock("AAPL").then(quote => (console.log(quote)));
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

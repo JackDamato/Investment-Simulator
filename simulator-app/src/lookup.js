@@ -1,14 +1,25 @@
 import api_key from "./api_key.js";
 
 const apikey = api_key;
+const types = ['/quote?', '/stats?', '/company?'];
 
-async function quoteStock (symbol) {
-    let url = "https://cloud.iexapis.com/stable/stock/" + symbol + "/quote?token=" + apikey;
-    let response = await fetch(url);
-    if (response.status != 200)
-        return {};
-    let quote = await response.json();
-    return quote;
+async function getStockData (symbol, type) {
+        if (symbol == "")
+            return {}
+
+        if (!types.includes(type)) {
+            console.log("Error 400. Invalid type for GETSTOCKDATA");
+            return {};
+        }
+            
+        let url = "https://cloud.iexapis.com/stable/stock/" + symbol + type + "token=" + apikey;
+        let response = await fetch(url);
+        if (response.status != 200)
+            return {};
+        let data = await response.json();
+        return data;
+
 };
 
-export default quoteStock;
+
+export default getStockData;

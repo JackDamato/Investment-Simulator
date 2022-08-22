@@ -1,12 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
-import QuoteForm from './quoteForm';
+import Quote from './components/quotePage/quote.js';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <QuoteForm></QuoteForm>
+        <Quote /> 
       </header>
     </div>
   );
