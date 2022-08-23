@@ -1,4 +1,4 @@
-import getStockData from '../../lookup.js';
+import getStockData from "../../helpers/lookup";
 import { useState } from "react";
 
 function QuoteForm(props) {

@@ -3,7 +3,7 @@ import api_key from "./api_key.js";
 const apikey = api_key;
 const types = ['/quote?', '/stats?', '/company?'];
 
-async function getStockData (symbol, type) {
+async function getStockData (symbol, type = types[0]) {
         if (symbol == "")
             return {}
 
