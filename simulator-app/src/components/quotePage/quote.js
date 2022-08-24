@@ -16,7 +16,7 @@ function Quote() {
             <div className='Quote-header'>
                 <span className='Title-header'>Quote a Company</span>
                 <div style={{ 'fontSize': '2vmin' }}>Enter a ticker symbol to recieve relevant data for that company.</div>
-                <hr className='Invisible'></hr>
+                <hr></hr>
                 <QuoteForm data={getData}/>
             </div>
             {/* DATA EXHIBIT */}

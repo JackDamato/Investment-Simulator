@@ -10,7 +10,6 @@ function QuoteForm(props) {
             getStockData(ticker, '/stats?').then(stats =>
                 getStockData(ticker, '/company?').then(company =>
                     (props.data({'stockQuote': quote, 'stockStats': stats, 'stockCompany': company},)))));
-
     }
 
     return (
@@ -18,7 +17,7 @@ function QuoteForm(props) {
             <form onSubmit={handleSubmit}>
                 <label>
                     Ticker:
-                    <input type="text" value={ticker} onChange={(e) => setTicker(e.target.value)} />
+                    <input type="text" value={ticker} onChange={event => setTicker(event.target.value)} />
                 </label>
                 <input type="submit" value="Submit" />
             </form>
